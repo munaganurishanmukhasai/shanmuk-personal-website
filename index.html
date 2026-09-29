@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shanmuk — Personal Space</title>
+<meta name="description" content="The personal website of Shanmuk. Student, tech enthusiast and creator.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#050507;--text:#f5f5f7;--muted:#9b9ba5;--line:#ffffff16;--glass:#ffffff08;--accent:#8b7cff}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-30%;background:radial-gradient(circle at 20% 20%,#6d5df522,transparent 28%),radial-gradient(circle at 80% 30%,#008cff18,transparent 25%),radial-gradient(circle at 50% 90%,#a855f71a,transparent 28%);filter:blur(30px);pointer-events:none;z-index:-1}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(92%,900px);padding:12px 16px;border:1px solid var(--line);background:#0b0b0ecc;backdrop-filter:blur(18px);border-radius:22px;display:flex;justify-content:space-between;align-items:center;z-index:10}
+.logo{font-weight:800;letter-spacing:.12em}
+.navlinks{display:flex;gap:20px;font-size:13px;color:#c9c9d1}
+.navlinks a:hover{color:#fff}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:120px 20px 70px}
+.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--glass);padding:8px 13px;border-radius:99px;color:#c9c7ff;font-size:12px;margin-bottom:22px}
+.dot{width:7px;height:7px;border-radius:50%;background:#6dff9a;box-shadow:0 0 14px #6dff9a}
+h1{font-size:clamp(58px,12vw,150px);line-height:.86;letter-spacing:-.07em}
+.gradient{background:linear-gradient(100deg,#fff,#a7a0ff 45%,#8bdcff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:610px;margin:28px auto;color:var(--muted);font-size:17px;line-height:1.7}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 19px;border-radius:14px;border:1px solid var(--line);font-size:14px;transition:.25s}
+.btn.primary{background:#fff;color:#09090b;border-color:#fff}
+.btn:hover{transform:translateY(-3px)}
+section{width:min(1080px,92%);margin:0 auto;padding:105px 0}
+.eyebrow{color:#8f87ff;font-size:12px;text-transform:uppercase;letter-spacing:.18em;margin-bottom:14px}
+h2{font-size:clamp(34px,6vw,68px);letter-spacing:-.05em;margin-bottom:18px}
+.lead{color:var(--muted);line-height:1.7;max-width:650px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:35px}
+.card{border:1px solid var(--line);background:linear-gradient(145deg,#ffffff0a,#ffffff03);border-radius:24px;padding:26px;min-height:190px;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#ffffff32;background:#ffffff0d}
+.icon{font-size:28px;margin-bottom:35px}.card h3{font-size:19px;margin-bottom:9px}.card p{font-size:14px;line-height:1.6;color:var(--muted)}
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:center}
+.avatar{aspect-ratio:1;border-radius:32px;border:1px solid var(--line);background:radial-gradient(circle at 30% 25%,#9388ff44,transparent 25%),linear-gradient(145deg,#15151b,#08080a);display:grid;place-items:center;font-size:clamp(80px,14vw,170px);font-weight:900;letter-spacing:-.08em}
+.statrow{display:flex;gap:10px;margin-top:25px}.stat{flex:1;padding:17px;border:1px solid var(--line);border-radius:18px;background:#ffffff05}.stat b{display:block;font-size:24px}.stat span{font-size:11px;color:var(--muted)}
+.collab{border:1px solid #8b7cff44;background:linear-gradient(135deg,#8b7cff12,#00c8ff08);border-radius:30px;padding:50px;text-align:center}
+.collab p{margin:0 auto 25px;color:var(--muted);max-width:620px;line-height:1.7}
+.socials{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:30px}
+.social{padding:12px 17px;border:1px solid var(--line);border-radius:14px;color:#d9d9e0;font-size:13px}
+footer{border-top:1px solid var(--line);padding:30px 5%;display:flex;justify-content:space-between;color:#777;font-size:12px}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:720px){.navlinks{display:none}.grid{grid-template-columns:1fr}.about{grid-template-columns:1fr}.avatar{max-width:340px;margin:auto}.collab{padding:32px 20px}section{padding:75px 0}.hero p{font-size:15px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">SHANMUK.</div><div class="navlinks"><a href="#about">About</a><a href="#world">My World</a><a href="#work">Work</a><a href="#contact">Contact</a></div></nav>
+
+<main>
+<section class="hero">
+<div>
+<div class="badge"><span class="dot"></span> Welcome to my space</div>
+<h1>SHANMUK<br><span class="gradient">BEYOND THE PROFILE.</span></h1>
+<p>A personal space for my journey through technology, creativity, college life and everything I’m building along the way.</p>
+<div class="buttons"><a class="btn primary" href="#about">Explore my world ↓</a><a class="btn" href="https://instagram.com/" target="_blank">Instagram ↗</a></div>
+</div>
+</section>
+
+<section id="about" class="reveal">
+<div class="about">
+<div class="avatar">S</div>
+<div>
+<div class="eyebrow">01 — About me</div>
+<h2>More than<br><span class="gradient">a username.</span></h2>
+<p class="lead">Hey, I’m Shanmuk. I’m a student exploring coding, AI, technology and creative ideas. This website is my little corner of the internet — a place to show what I’m learning, making and enjoying.</p>
+<div class="statrow"><div class="stat"><b>01</b><span>CURIOUS MIND</span></div><div class="stat"><b>∞</b><span>IDEAS</span></div><div class="stat"><b>24/7</b><span>LEARNING</span></div></div>
+</div>
+</div>
+</section>
+
+<section id="world" class="reveal">
+<div class="eyebrow">02 — My world</div><h2>Things I’m into.</h2><p class="lead">A few areas that make up my world right now.</p>
+<div class="grid">
+<div class="card"><div class="icon">💻</div><h3>Code</h3><p>Learning programming from the basics and turning ideas into working projects.</p></div>
+<div class="card"><div class="icon">🤖</div><h3>AI</h3><p>Exploring artificial intelligence and the tools shaping the future.</p></div>
+<div class="card"><div class="icon">📱</div><h3>Tech</h3><p>Phones, gadgets, software and the little details that make technology fun.</p></div>
+<div class="card"><div class="icon">📸</div><h3>Instagram</h3><p>My social space for photos, moments, updates and creative posts.</p></div>
+<div class="card"><div class="icon">🎮</div><h3>Gaming</h3><p>A place to switch off, have fun and enjoy some games.</p></div>
+<div class="card"><div class="icon">🚀</div><h3>Ideas</h3><p>Always experimenting with new things and looking for the next project.</p></div>
+</div>
+</section>
+
+<section id="work" class="reveal">
+<div class="eyebrow">03 — What I’m building</div><h2>Small steps.<br><span class="gradient">Big ideas.</span></h2>
+<div class="grid">
+<div class="card"><div class="icon">01</div><h3>My AI Journey</h3><p>Documenting what I learn while building my skills in AI and Python.</p></div>
+<div class="card"><div class="icon">02</div><h3>Personal Projects</h3><p>Projects and experiments will appear here as I build them.</p></div>
+<div class="card"><div class="icon">03</div><h3>Future Stuff</h3><p>This space is intentionally open for whatever comes next.</p></div>
+</div>
+</section>
+
+<section id="contact" class="reveal">
+<div class="collab">
+<div class="eyebrow">04 — Collaborate</div>
+<h2>Let’s make something<br><span class="gradient">worth sharing.</span></h2>
+<p>For brand promotions, collaborations, creative ideas or just saying hello, reach out through my social channels.</p>
+<div class="buttons"><a class="btn primary" href="mailto:your@email.com">Work with me ↗</a><a class="btn" href="https://instagram.com/" target="_blank">DM on Instagram ↗</a></div>
+<div class="socials"><a class="social" href="https://instagram.com/" target="_blank">Instagram</a><a class="social" href="https://www.linkedin.com/in/munaganuri-shanmukha-sai-undefined-760150428" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="social" href="https://github.com/munaganurishanmukhasai" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+</div>
+</section>
+</main>
+<footer><span>© 2026 SHANMUK.</span><span>Built for the next chapter.</span></footer>
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));
+</script>
+</body>
+</html>
